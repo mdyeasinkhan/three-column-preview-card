@@ -1,0 +1,127 @@
+:root{
+    --primary-color: #e38826;
+    --secondary-color: #006970;
+    --tertiary-color: #004241;
+    --font-Big-Shoulders-Display: 'Big Shoulders Display', cursive;
+    --font-Lexend-Deca: 'Lexend Deca', sans-serif;
+
+
+}
+
+body{
+    font-family: var(--font-Lexend-Deca);
+}
+
+h1,h2,h3,h4{
+    font-family: var(--font-Big-Shoulders-Display);
+    font-weight: 700;
+}
+
+.container{
+   max-width: 1000px;
+    margin: 0 auto;
+}
+
+.c-showcase{
+    grid-template-rows: repeat(3, 1fr);
+    margin:5rem;
+}
+.c-chowcase_card{
+    padding: 30px;
+    padding-bottom: 3rem;
+}
+
+ h2.c-showcase_card-title{
+    color: #f2f2f2;
+    font-size: 38px;
+    text-transform: uppercase;
+
+}
+
+.c-showcase_card-text{
+    margin-top: 1.25rem;
+  margin-bottom: 4rem;
+    opacity: 0.7;
+    line-height: 1.7;
+    color: white;
+    padding-right: 2.5rem;
+}
+.c-chowcase_card:nth-child(1){
+    background: var(--primary-color);
+
+}
+
+.c-chowcase_card:nth-child(2){
+    background: var(--secondary-color);
+}
+.c-chowcase_card:nth-child(3){
+    background: var(--tertiary-color);
+    
+}
+
+.c-showcase_card-btn{
+    position: relative;
+    padding: 0.6em 1.2em;
+    background: white;
+    border-radius: 2.75rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-out;
+    mix-blend-mode: screen;
+    border: 2px solid white;
+    
+}
+
+.c-showcase_card-btn:hover{
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    color: white;
+}
+
+.footer p{
+    text-align: center;
+    margin-top: 4rem;
+}
+.footer a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+
+    
+    .c-showcase{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        margin-top: 10rem;
+       
+    }
+
+    .c-chowcase_card:nth-child(1){
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    
+    }
+    .c-chowcase_card:nth-child(3){
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .c-chowcase_card:nth-child(1){
+       border-top-left-radius: 10px;
+       border-top-right-radius: 10px;
+    
+    }
+    
+   
+    .c-chowcase_card:nth-child(3){
+        border-bottom-left-radius: 10px;
+       border-bottom-right-radius: 10px;
+        
+    }
+}
